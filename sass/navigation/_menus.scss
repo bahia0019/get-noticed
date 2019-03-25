@@ -1,0 +1,255 @@
+.main-navigation {
+  border-radius: 0;
+  font-weight: $font__weight;
+
+  ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5em;
+      left: -999em;
+      z-index: 99999;
+
+      ul {
+        left: -999em;
+        top: 0;
+      }
+
+      li {
+        &:hover > ul,
+        &.focus > ul {
+          left: 100%;
+        }
+      }
+
+      a {
+        width: 200px;
+      }
+
+      :hover > a,
+      .focus > a {
+      }
+
+      a:hover,
+      a.focus {
+      }
+    }
+
+    li:hover > ul,
+    li.focus > ul {
+      left: auto;
+    }
+  }
+
+  li {
+    float: left;
+    position: relative;
+
+    &:hover > a,
+    &.focus > a {
+      background: rgba(0, 0, 0, 0.1);
+      background: -moz-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(0, 0, 0, 0.025) 0%,
+        rgba(0, 0, 0, 0.15) 100%
+      );
+      background: -webkit-gradient(
+        radial,
+        center center,
+        0px,
+        center center,
+        100%,
+        color-stop(0%, rgba(0, 0, 0, 0.025)),
+        color-stop(100%, rgba(0, 0, 0, 0.15))
+      );
+      background: -webkit-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(0, 0, 0, 0.025) 0%,
+        rgba(0, 0, 0, 0.15) 100%
+      );
+      background: -o-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(0, 0, 0, 0.025) 0%,
+        rgba(0, 0, 0, 0.15) 100%
+      );
+      background: -ms-radial-gradient(
+        center,
+        ellipse cover,
+        rgba(0, 0, 0, 0.025) 0%,
+        rgba(0, 0, 0, 0.15) 100%
+      );
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.025) 0%,
+        rgba(0, 0, 0, 0.15) 100%
+      );
+      border: 1px solid rgba(255, 255, 255, 0.125);
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5em;
+    border: 1px solid transparent;
+  }
+
+  .cta a:hover,
+  .cta-scroll {
+    background: rgba(0, 0, 0, 0.1);
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(0, 0, 0, 0.025) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+    background: -webkit-gradient(
+      radial,
+      center center,
+      0px,
+      center center,
+      100%,
+      color-stop(0%, rgba(0, 0, 0, 0.025)),
+      color-stop(100%, rgba(0, 0, 0, 0.15))
+    );
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(0, 0, 0, 0.025) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+    background: -o-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(0, 0, 0, 0.025) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+    background: -ms-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(0, 0, 0, 0.025) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.025) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+    border: 1px solid $color__orange;
+  }
+
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a,
+  .current-menu-ancestor > a {
+  }
+}
+
+/* Small menu. */
+.menu-toggle {
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .hamburger {
+    width: 30px;
+    height: 32px;
+  }
+
+  &:hover {
+    background: none;
+  }
+}
+
+.main-navigation.toggled ul {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  li {
+    a {
+      font-family: "Julius Sans One", sans-serif;
+      border: none;
+
+      &:hover {
+        border: none;
+        background: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: block;
+  }
+
+  .menu-main-menu-container {
+    position: initial;
+    width: initial;
+    left: initial;
+    background-color: initial;
+  }
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  .site-main & {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+  }
+
+  .nav-previous {
+    width: 50%;
+  }
+
+  .nav-next {
+    text-align: right;
+    width: 50%;
+  }
+}
+
+.lesson-list {
+  display: block;
+  cursor: pointer;
+  ul {
+    list-style: none;
+    margin: 0 0 1em 0;
+    padding: 0;
+    display: none;
+  }
+  li a {
+    text-decoration: none;
+  }
+  li a:hover {
+    color: #ddd;
+    text-decoration: underline;
+    text-decoration-color: #ddd;
+  }
+}

@@ -1,0 +1,253 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  width: 70%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.content-area {
+  width: 100%;
+}
+
+.sidebar {
+  width: 25%;
+  padding: 0.5em;
+  margin: 1em 0 0 2%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.025) 0%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+
+.inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.75em 1em;
+
+  .site-branding {
+    & a {
+      color: #fff;
+      text-decoration: none;
+    }
+    & a:hover {
+      color: #ddd;
+    }
+  }
+}
+
+#get-noticed-logo {
+  display: flex;
+  align-items: flex-end;
+  #get-noticed {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 100;
+    font-size: 10px;
+    color: #fff;
+    width: auto;
+  }
+  svg {
+    width: 130px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  #get-noticed-logo {
+    #get-noticed {
+      font-size: 15px;
+    }
+    svg {
+      width: 210px;
+    }
+  }
+}
+
+#highlight-one,
+#highlight-two {
+  visibility: hidden;
+}
+
+.stripes-container {
+  float: left;
+  width: 100%;
+}
+
+.stripes {
+  width: 100%;
+  height: 5px;
+  margin: 0 0 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-left: -100%;
+}
+
+.site-footer {
+  background-color: #111;
+  padding: 0 6%;
+  color: #aaa;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+
+  .footer-identity {
+    width: 300px;
+    margin: 0 auto;
+    padding: 1.5em 0 0;
+    text-align: center;
+  }
+
+  .footer-widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+
+    .widget {
+      list-style: none;
+      padding: 0.25em;
+
+      li {
+        .widgettitle {
+          margin: 0;
+          font-size: 150%;
+          padding: 0;
+        }
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding-left: 0;
+          li {
+            font-weight: $font__weight;
+            a:hover {
+              color: $color__orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-info {
+  padding: 1em;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.025) 0%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  padding: 1em;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 40em) {
+  .testimonials {
+    flex-direction: row;
+  }
+  .testimonial {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 1em;
+  }
+}
+
+.testimonial-image {
+  margin-right: 1em;
+}
+
+.course-area {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #ccc;
+  h2 {
+    margin: 0;
+  }
+}
+
+.lesson-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3.sections {
+  margin: 0 0 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+.lesson-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: #ddd;
+  }
+}
+
+.woocommerce-notices-wrapper,
+.woocommerce-form-coupon-toggle {
+  display: none;
+}
+
+.woocommerce table.shop_table {
+  border: 1px solid #ccc;
+  td {
+    border-color: #ccc;
+  }
+}
+
+.select2-container {
+  color: #333;
+}
+
+.affwp-form input[type="text"],
+.affwp-form input[type="password"],
+.affwp-form input[type="email"],
+.affwp-form input[type="url"],
+.affwp-form textarea {
+  width: 100%;
+}
+
+.magnify figure svg {
+  width: 150px;
+}
+
+.affwp-form input[type="text"].required,
+.affwp-form input[type="password"].required,
+.affwp-form input[type="email"].required,
+.affwp-form input[type="url"].required {
+  color: #333;
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";

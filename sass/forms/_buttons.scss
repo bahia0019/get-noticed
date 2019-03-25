@@ -1,0 +1,64 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: $color__border-button;
+  border-radius: 3px;
+  background: $color__background-button;
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  color: #fff;
+  font-size: 22px;
+  height: 2em;
+  padding: 0;
+
+  &:hover {
+    border-color: $color__border-button-hover;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $color__border-button-focus;
+  }
+}
+
+.cta a {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.025) 0%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  font-style: italic;
+  color: #fff;
+  background-color: transparent;
+  border: 5px solid #d64b26;
+  font-size: 30px;
+
+  &:hover {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.325) 0%,
+      rgba(0, 0, 0, 0.315) 100%
+    );
+  }
+}
+
+.wp-block-image {
+  margin-bottom: 0;
+}
+
+.flo-post ul,
+.flo-post ol,
+.flo-post__styles ul,
+.flo-post__styles ol {
+  margin: 0;
+}
+
+.wp-block-gallery .blocks-gallery-image,
+.wp-block-gallery .blocks-gallery-item {
+  margin: 10px 10px 0 0;
+}
