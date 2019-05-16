@@ -439,8 +439,9 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
-ul, ol {
-  margin: 0 0 1.5em 3em; }
+ul,
+ol {
+  margin: 0; }
 
 ul {
   list-style: disc; }
@@ -448,10 +449,8 @@ ul {
 ol {
   list-style: decimal; }
 
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em; }
+li {
+  margin-bottom: 1em; }
 
 dt {
   font-weight: bold; }
@@ -836,8 +835,34 @@ a {
   margin: 0 auto;
   flex: 1; }
 
-.content-area {
-  width: 100%; }
+.single-seoqa .content-area {
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  padding: 1em;
+  margin-top: 4em;
+  outline: 5px solid rgba(255, 255, 255, 0.1);
+  outline-offset: 10px; }
+  .single-seoqa .content-area .entry-header {
+    display: block; }
+  .single-seoqa .content-area .entry-meta {
+    font-size: 80%;
+    margin-top: -20px; }
+  .single-seoqa .content-area h1 {
+    margin: 0.67em 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.67em; }
+  .single-seoqa .content-area figcaption,
+  .single-seoqa .content-area .wp-block-image figcaption {
+    color: #666; }
+  .single-seoqa .content-area a {
+    color: #999; }
+  .single-seoqa .content-area a:hover {
+    color: #666; }
+
+.single-seoqa .site-main {
+  border: 1px solid #ccc;
+  padding: 1em; }
 
 .sidebar {
   width: 25%;
@@ -1093,6 +1118,9 @@ img.round-img-sm {
   border: 1px solid #fff;
   padding: 5px;
   max-width: 150px; }
+
+.wp-block-image .alignleft {
+  margin-right: 2em; }
 
 /*--------------------------------------------------------------
 ## Captions

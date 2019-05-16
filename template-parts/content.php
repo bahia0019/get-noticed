@@ -19,12 +19,13 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
+		if ( is_singular( array( 'post', 'seoqa' ) ) ) :
 			?>
 			<div class="entry-meta">
-				<?php
-				getnoticed_posted_on();
-				getnoticed_posted_by();
+				<?php 
+				getnoticed_posted_on(); 
+				echo ' by: '; 
+				echo get_the_author(); 
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -44,7 +45,6 @@
 
 	</header><!-- .entry-header -->
 
-	<?php getnoticed_post_thumbnail(); ?>
 	<?php 
 		if ( is_singular( 'lessons' )){
 	echo '<div class="lesson-body">';
