@@ -257,6 +257,7 @@ h3.lesson-title {
   height: 0;
   display: none;
   transition: 0.4s ease-in-out;
+  margin: 0.5em 0.5em 1em;
   &.show {
     height: fit-content;
     display: block;

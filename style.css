@@ -4,7 +4,7 @@ GitHub Theme URI: https://github.com/bahia0019/get-noticed
 Author: William Bay
 Author URI: https://flauntsites.com
 Description: Description
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: getnoticed
@@ -1007,7 +1007,8 @@ h3.lesson-title {
 .section-list {
   height: 0;
   display: none;
-  transition: 0.4s ease-in-out; }
+  transition: 0.4s ease-in-out;
+  margin: 0.5em 0.5em 1em; }
   .section-list.show {
     height: fit-content;
     display: block; }

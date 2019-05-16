@@ -12,6 +12,7 @@ const lessonAccordion = function() {
         this.classList.toggle("active")
         this.nextElementSibling.classList.toggle("show")
       }
+      return false
     }
   }
 
