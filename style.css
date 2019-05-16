@@ -4,7 +4,7 @@ GitHub Theme URI: https://github.com/bahia0019/get-noticed
 Author: William Bay
 Author URI: https://flauntsites.com
 Description: Description
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: getnoticed
@@ -368,11 +368,6 @@ h6 {
   clear: both;
   font-family: "Julius Sans One", sans-serif;
   font-weight: 100; }
-
-h4 {
-  margin: 0 0 0.25em 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  padding: 0 0 0.25em 0; }
 
 p {
   margin-bottom: 1.5em; }
@@ -993,12 +988,33 @@ a {
   display: flex;
   justify-content: space-between; }
 
-h3.sections {
+h3.lesson-title {
   margin: 0 0 1em;
   border-bottom: 1px solid #ccc; }
 
+.section-title {
+  display: block;
+  text-decoration: none;
+  margin: 0 0 0.25em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.25em;
+  background-color: rgba(0, 0, 0, 0.15); }
+  .section-title h4 {
+    margin: 0; }
+  .section-title:hover {
+    background-color: rgba(0, 0, 0, 0.3); }
+
+.section-list {
+  height: 0;
+  display: none;
+  transition: 0.4s ease-in-out; }
+  .section-list.show {
+    height: fit-content;
+    display: block; }
+
 .lesson-link {
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.2s ease-in-out; }
   .lesson-link:hover {
     text-decoration: underline;
     color: #ddd; }

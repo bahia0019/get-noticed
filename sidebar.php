@@ -10,7 +10,7 @@
 
 <aside id="secondary" class="sidebar">
 
-<h3 class="sections">Sections</h3>
+<h3 class="lesson-title">Sections</h3>
 	<?php 
 
 	$terms = get_terms( array(
@@ -40,13 +40,14 @@
 			<?php if ( $the_query->have_posts() ) : ?>
 
 				<!-- pagination here -->
-				<h4><?php echo esc_html( $term->name ); ?></h4>
-				<!-- the loop -->
-				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<a class="lesson-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
-				<?php endwhile; ?>
-				<!-- end of the loop -->
-
+				<a href="#" class="section-title"><h4><?php echo esc_html( $term->name ); ?></h4></a>
+				<div class="section-list">
+					<!-- the loop -->
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+						<a class="lesson-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
+					<?php endwhile; ?>
+					<!-- end of the loop -->
+				</div>
 				<!-- pagination here -->
 
 				<?php wp_reset_postdata(); ?>

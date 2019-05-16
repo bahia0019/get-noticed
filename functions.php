@@ -142,6 +142,10 @@ function getnoticed_scripts() {
 	wp_enqueue_script( 'greensock', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js', true);  
 	wp_enqueue_script( 'flauntsites2017-header', get_template_directory_uri() . '/js/header.js', array(), '20190102', true );
 		
+	if ( is_singular( 'lessons' ) ) {
+		wp_enqueue_script( 'lessons', get_template_directory_uri() . '/js/lessons.js', array(), '20190516', true );
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'getnoticed_scripts' );
 
