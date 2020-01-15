@@ -84,6 +84,11 @@ if ( ! function_exists( 'getnoticed_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		 * Add support for responsive embeds (Youtube, Vime0).
+		 */
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'getnoticed_setup' );
