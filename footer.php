@@ -78,6 +78,24 @@
 </div><!-- .site-info -->
 </div><!-- #page -->
 
+<script>
+    let swiper = new Swiper('.swiper-container', {
+	  slidesPerView: 1,
+	  spaceBetween: 10,
+	  lazy: true,
+	  autoplay:{
+		  delay:3500,
+	  },
+	  loop:true,
+		breakpoints: {
+			1024: {
+			slidesPerView: 2,
+			spaceBetween: 10
+			},
+		},
+    });
+</script>
+
 <?php if ( ! is_user_logged_in() ){ ?>
 	<!--Start of Tawk.to Script-->
 	<script type="text/javascript">

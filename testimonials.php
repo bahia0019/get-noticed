@@ -11,19 +11,23 @@
 		<?php if ( $the_query->have_posts() ) : ?>
 			<!-- pagination here -->
 				<h2>What people are saying.</h2>
-				<div class="testimonials">
-				<!-- the loop -->
-				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<div class="testimonial">
-						<div class="testimonial-image">
-							<?php the_post_thumbnail( 'medium_square', array('class' => 'round-img-sm') ); ?>
+				<div class="testimonials swiper-container">
+					<div class="swiper-wrapper">
+					<!-- the loop -->
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+						<div class="swiper-slide">
+							<div class="testimonial">
+								<div class="testimonial-image">
+									<?php the_post_thumbnail( 'medium_square', array('class' => 'round-img-sm') ); ?>
+								</div>
+								<div class="testimonial-content">
+									<?php the_content(); ?>
+								</div>
+							</div>
 						</div>
-						<div class="testimonial-content">
-							<?php the_content(); ?>
-						</div>
+					<?php endwhile; ?>
+					<!-- end of the loop -->
 					</div>
-				<?php endwhile; ?>
-				<!-- end of the loop -->
 			</div>
 			<!-- pagination here -->
 

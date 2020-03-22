@@ -140,12 +140,16 @@ function getnoticed_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	wp_enqueue_script( 'scrollmagic', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', array(), '20190101');
-	wp_enqueue_script( 'scrollmagic_gsap_support', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js', array(), '20190101');
-	wp_enqueue_script( 'greensock_drawSVG', get_template_directory_uri() . '/js/DrawSVGPlugin.min.js', array(), '20190101', true );
-	// wp_enqueue_script( 'greensock_smooth_scroll_to', get_template_directory_uri() . '/js/ScrollToPlugin.min', array(), '20190101', true );
+	wp_enqueue_script( 'scrollmagic', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', array(), date( 'Ymd' ));
+	wp_enqueue_script( 'scrollmagic_gsap_support', '//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js', array(), date( 'Ymd' ));
+	wp_enqueue_script( 'greensock_drawSVG', get_template_directory_uri() . '/js/DrawSVGPlugin.min.js', array(), date( 'Ymd' ), true );
 	wp_enqueue_script( 'greensock', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js', true);  
-	wp_enqueue_script( 'flauntsites2017-header', get_template_directory_uri() . '/js/header.js', array(), '20190102', true );
+	wp_enqueue_script( 'flauntsites2017-header', get_template_directory_uri() . '/js/header.js', array(), date( 'Ymd' ), true );
+
+	//Adds Swiper Slider support.
+	wp_enqueue_script( 'swiper_scripts', 'https://unpkg.com/swiper/js/swiper.js' );
+	wp_enqueue_style( 'swiper_styles', 'https://unpkg.com/swiper/css/swiper.css' );
+
 		
 	if ( is_singular( 'lessons' ) ) {
 		wp_enqueue_script( 'lessons', get_template_directory_uri() . '/js/lessons.js', array(), '20190516', true );
