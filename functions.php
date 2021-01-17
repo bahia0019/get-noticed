@@ -130,7 +130,7 @@ add_action( 'widgets_init', 'getnoticed_widgets_init' );
  * Enqueue scripts and styles.
  */
 function getnoticed_scripts() {
-	wp_enqueue_style( 'getnoticed-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'getnoticed-style', get_stylesheet_uri(), date( 'Ymd' ) );
 	wp_enqueue_style( 'google-fonts;', 'https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:100i,300,300i,400,400i|Courgette' );
 	
 	wp_enqueue_script( 'getnoticed-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -147,8 +147,8 @@ function getnoticed_scripts() {
 	wp_enqueue_script( 'flauntsites2017-header', get_template_directory_uri() . '/js/header.js', array(), date( 'Ymd' ), true );
 
 	//Adds Swiper Slider support.
-	wp_enqueue_script( 'swiper_scripts', 'https://unpkg.com/swiper/js/swiper.js' );
-	wp_enqueue_style( 'swiper_styles', 'https://unpkg.com/swiper/css/swiper.css' );
+	wp_enqueue_script( 'swiper_scripts', 'https://unpkg.com/swiper/swiper-bundle.min.js' );
+	wp_enqueue_style( 'swiper_styles', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
 
 		
 	if ( is_singular( 'lessons' ) ) {
